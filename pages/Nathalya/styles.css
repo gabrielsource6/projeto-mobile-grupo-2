@@ -1,0 +1,17 @@
+button {
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(99, 103, 28);
+    border-radius: 20px;
+    border: 0;
+    padding: 10px 60px;
+    cursor: pointer;
+  }
+  
+  p {
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5); /* Fundo semi-transparente para o texto */
+    border-radius: 8px;
+    text-align: center;
+  }
