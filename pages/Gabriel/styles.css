@@ -1,1 +1,33 @@
+<<<<<<< HEAD
 /* pagina do artur */
+=======
+p{
+    text-align: center;
+    color: blue;
+}
+
+h3{
+   text-align: center;
+    color: red;
+}
+
+body{
+    background-color: black;
+}
+
+
+.motivacao-button {
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .motivacao-button:hover {
+    background-color: #45a049;
+  }
+>>>>>>> 760c1e2f9f278a06d93608333a975cf577fade76
