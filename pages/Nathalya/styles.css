@@ -1,0 +1,121 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('https://cdn.pensador.com/img/temas/fr/as/frases_motivacionais.jpg'); 
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  color: white;
+}
+
+
+.container h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+
+.container button {
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffffffcc;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.container button:hover {
+  background-color: #ffffff;
+}body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #4CAF50, #8BC34A); /* Gradiente verde */
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    backdrop-filter: blur(5px); /* Efeito de blur no fundo */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.phrase-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#phrase {
+    font-size: 1.8em;
+    font-style: italic;
+    line-height: 1.5;
+    color: #fff;
+}
+
+button {
+    background-color: #FFC107; /* Amarelo vibrante */
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #FFD54F; /* Amarelo mais claro no hover */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    #phrase {
+        font-size: 1.5em;
+    }
+    button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
