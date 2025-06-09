@@ -9,25 +9,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const phrases = [
         "Com o coração cheio de gratidão, sei que sou capaz de superar qualquer obstáculo que a vida apresentar!",
 
-        "Acredite no seu potencial e voe alto!",
+        "É importante agradecer pelo hoje sem nunca desistir do amanhã!",
 
-        "O único lugar onde o sucesso vem antes do trabalho é no dicionário.",
+        "A ideia é nunca perder a motivação para subir cada degrau rumo ao sucesso, por mais difícil que seja. E também não esquecer de agradecer pelas lições aprendidas em cada etapa da jornada.",
 
-        "Seja a mudança que você deseja ver no mundo.",
+        "Agradeço todos os dias pela minha vida, por tudo o que conquistei até aqui. E tenho fé de que o futuro me reserva realizações ainda maiores!",
 
-        "A persistência é o caminho do êxito.",
+        "Só tenho a agradecer a cada um dos desafios que me trouxeram até aqui, que me fizeram crescer e aprender tantas coisas!",
 
-        "Comece onde você está. Use o que você tem. Faça o que você pode.",
+        "Não importa que você vá devagar, contanto que você não pare.",
 
-        "Não espere por oportunidades, crie-as.",
+        "Conhecer a si mesmo é o começo de toda sabedoria.",
 
-        "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
+        "Não existe nada de completamente errado no mundo, mesmo um relógio parado, consegue estar certo duas vezes por dia.",
 
         "Transforme seus muros em pontes.",
 
-        "A jornada de mil milhas começa com um único passo.",
+        "O otimismo é a fé daquele que conduz à realização; nada pode ser feito sem esperança.",
 
-        "Sua atitude determina sua direção."
+        "Pense, só não desista!"
 
 
     ];
