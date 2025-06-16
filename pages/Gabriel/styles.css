@@ -23,6 +23,7 @@ body{
 
 .motivacao-button {
     font-size: 20px;
+    right: 0px;
     padding: 15px 30px;
     background-color: #4CAF50;
     color: white;
@@ -37,24 +38,24 @@ body{
   }
 
   .container {
-    position: relative; /* Necessário para o controle do z-index */
+    position: relative; 
     height: 100vh;
   }
   
   .background-img {
-    position: absolute; /* Faz a imagem ficar fora do fluxo normal da página */
+    position: absolute; 
     top: 0;
     left: 0;
-    width: 100%; /* Faz a imagem cobrir a largura da tela */
-    height: 100%; /* Faz a imagem cobrir toda a altura */
-    object-fit: cover; /* Faz a imagem se ajustar sem distorcer */
-    z-index: -1; /* Garante que a imagem fique atrás do conteúdo */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: -1; 
   }
   
   .content {
-    position: relative; /* Torna o conteúdo "acima" da imagem */
+    position: relative; 
     color: white;
     text-align: center;
-    z-index: 1; /* Garante que o texto fique acima da imagem */
+    z-index: 1; 
     padding: 20px;
   }

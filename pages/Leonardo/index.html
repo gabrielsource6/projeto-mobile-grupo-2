@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citações Motivacionais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex items-center justify-center min-h-screen text-white relative p-4">
+    <div class="background-image"></div>
+    <div class="gradient-overlay"></div>
+
+    <div class="bg-black bg-opacity-0 p-0 rounded-lg w-full text-center relative z-10">
+        <blockquote class="text-3xl md:text-4xl italic font-semibold mb-6 leading-relaxed" id="quote-text">
+            "Acredite que você pode e você estará no meio do caminho."
+        </blockquote>
+        <p class="text-xl md:text-2xl font-medium" id="quote-author">
+            — Theodore Roosevelt
+        </p>
+        <button id="new-quote-btn" class="mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
+            Nova Citação
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
