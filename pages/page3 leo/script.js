@@ -40,8 +40,7 @@ function generateRandomQuote() {
     quoteAuthor.textContent = `— ${randomQuote.author}`;
 }
 
-// Adiciona o event listener ao botão para gerar uma nova citação
 newQuoteBtn.addEventListener('click', generateRandomQuote);
 
-// Gera uma citação aleatória ao carregar a página
+
 window.onload = generateRandomQuote;
