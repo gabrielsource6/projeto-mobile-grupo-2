@@ -1,19 +1,51 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Obrigado</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #f0f8ff, #dbeafe);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
       background-color: white;
-      color: black;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       text-align: center;
-      padding-top: 20%;
-      font-size: 24px;
-      font-family: Arial, sans-serif;
+      max-width: 500px;
+    }
+
+    .card h1 {
+      font-size: 32px;
+      color: #1e40af;
+      margin-bottom: 20px;
+    }
+
+    .card p {
+      font-size: 20px;
+      color: #374151;
+    }
+
+    .emoji {
+      font-size: 50px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <p> Obrigado por visitar meu site, professor maidel </p>
+  <div class="card">
+    <div class="emoji">🙏</div>
+    <h1>Obrigado pela visita!</h1>
+    <p>Professor Maidel, agradecemos por acessar nosso site.</p>
+  </div>
 </body>
 </html>
