@@ -12,8 +12,14 @@ const quotes = [
   
     { quote: "É importante agradecer pelo hoje sem nunca desistir do amanhã.", author: "Desconhecido" },
   
-    { quote: "Transforme seus sonhos em metas e suas metas em conquistas.", author: "Steve Jobs" }
-  
+    { quote: "Transforme seus sonhos em metas e suas metas em conquistas.", author: "Steve Jobs" },
+
+    { quote: "A vida é o que acontece enquanto você está ocupado fazendo outros planos.", author: "John Lennon"},
+
+    { quote: "Não e mais fortes das éspecies que sobrevive, nem a mais inteligente, mas sim a que se adapta melhor a mudança.", author: "Charles Darwin"},
+
+    { quote: "Acredite em si mesmo. Você é mais corajoso do que pensa, mais talentoso do que sabe e mais capaz do que imagina.", author: "Roy T. Bennet"}
+
   ];
   
   let currentQuote = {};
@@ -60,7 +66,7 @@ const quotes = [
   
     const favoritesDiv = document.getElementById("favorites");
   
-    favoritesDiv.innerHTML = "<h3>⭐ Frases Favoritas:</h3>";
+    favoritesDiv.innerHTML = "<h3>  ✮ Frases Favoritas:</h3>";
   
     if (favorites.length === 0) {
   
