@@ -23,4 +23,17 @@ function moveSlide(direction) {
 // Adicionando um listener de evento para o botão "Próximo"
 document.getElementById('nextButton').addEventListener('click', () => {
     moveSlide(1); // Move para o próximo slide
-});
+}
+);
+
+const botao = document.getElementById('gosteiBtn');
+
+botao.addEventListener('click', () => {
+  botao.classList.toggle('clicked');
+  if (botao.classList.contains('clicked')) {
+    botao.textContent = 'Gostei ❤️';
+  } else {
+    botao.textContent = 'Gostei (:';
+  }
+}
+);
