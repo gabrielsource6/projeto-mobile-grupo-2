@@ -2,12 +2,11 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url('https://cdn.pensador.com/img/temas/fr/as/frases_motivacionais.jpg'); 
+  background-image: url('https://admin.sportshackster.com/WallPaperMedia/PlayerWallPaperImage/jjk-9_63864341625675.9.jpg'); 
   background-size: cover;
   background-position: center;
   font-family: "Edu SA Hand", cursive;
 }
-
 
 .container {
   height: 100%;
@@ -16,7 +15,7 @@ body {
   justify-content: center;
   align-items: center; 
   text-align: center;
-  color: rgb(168, 168, 168);
+  color: rgb(0, 242, 255);
 }
 
 
