@@ -1,0 +1,133 @@
+body {
+    font-family: 'Arial', sans-serif; /* Fonte mais suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa a altura total da viewport */
+    margin: 0;
+    background: linear-gradient(135deg, #f0e6ef, #e0f2f7); /* Gradiente de fundo pastel */
+    color: #4a4a4a; /* Cor de texto mais suave */
+    position: relative; /* Para posicionar a imagem de fundo */
+    overflow: hidden; /* Garante que a imagem não vaze */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1517849658252-09292d3a3d2e?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Imagem de fundo pastel com natureza ou algo abstrato */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Opacidade suave para a imagem de fundo */
+    z-index: -1; /* Envia a imagem para trás do conteúdo */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo branco semi-transparente */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo do container */
+    -webkit-backdrop-filter: blur(5px); /* Para compatibilidade com Safari */
+}
+
+.container p {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #8c7ae6; /* Um tom de roxo pastel */
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.phrase-box {
+    background-color: #ffffff;
+    border: 2px solid #a0d9e7; /* Borda azul claro pastel */
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra interna suave */
+}
+
+#phrase {
+    font-size: 2.2em; /* Tamanho maior para a frase */
+    color: #6a5acd; /* Um tom de azul-roxo pastel */
+    font-style: italic;
+    line-height: 1.4;
+    margin: 0; /* Remove margem padrão do h1 */
+}
+
+button {
+    background-color: #a0d9e7; /* Azul claro pastel */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para botões */
+}
+
+button:hover {
+    background-color: #8bbdd9; /* Um pouco mais escuro ao passar o mouse */
+    transform: translateY(-3px); /* Efeito de elevação */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#gosteiBtn {
+    background-color: #f7b7a3; /* Laranja pastel para o botão Gostei */
+}
+
+#gosteiBtn:hover {
+    background-color: #f5a089;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        width: 95%;
+    }
+
+    .container p {
+        font-size: 1.5em;
+    }
+
+    #phrase {
+        font-size: 1.8em;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1em;
+        margin-top: 15px; /* Adiciona espaço entre botões em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    #phrase {
+        font-size: 1.5em;
+    }
+
+    button {
+        display: block; /* Botões em nova linha em telas muito pequenas */
+        width: calc(100% - 20px); /* Ajusta largura com margem */
+        margin: 10px auto;
+    }
+}
