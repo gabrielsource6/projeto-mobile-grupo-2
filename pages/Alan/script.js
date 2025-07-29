@@ -1,39 +1,22 @@
-// Variável para controlar o slide atual
-let currentSlide = 0;
+document.addEventListener('DOMContentLoaded', function() {
+  const favoriteButton = document.getElementById('favorite-btn');
 
-// Função para mover o slide
-function moveSlide(direction) {
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-
-    currentSlide += direction;
-
-    // Se o índice passar do último slide, volta para o primeiro
-    if (currentSlide >= totalSlides) {
-        currentSlide = 0;
-    } else if (currentSlide < 0) {
-        currentSlide = totalSlides - 1;
-    }
-
-    const slider = document.querySelector('.slider');
-    // Move o slider para o slide atual
-    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-}
-
-// Adicionando um listener de evento para o botão "Próximo"
-document.getElementById('nextButton').addEventListener('click', () => {
-    moveSlide(1); // Move para o próximo slide
-}
-);
-
-const botao = document.getElementById('gosteiBtn');
-
-botao.addEventListener('click', () => {
-  botao.classList.toggle('clicked');
-  if (botao.classList.contains('clicked')) {
-    botao.textContent = 'Gostei ❤️';
-  } else {
-    botao.textContent = 'Gostei (:';
+  // Verifica se a página já está marcada como favorita
+  if(localStorage.getItem('favorito')) {
+    favoriteButton.classList.add('favorito');
+    favoriteButton.innerText = 'Desfavoritar';
   }
-}
-);
+
+  favoriteButton.addEventListener('click', function() {
+    // Toggle entre favorito ou não favorito
+    if(favoriteButton.classList.contains('favorito')) {
+      localStorage.removeItem('favorito'); // Elimina o favorito
+      favoriteButton.classList.remove('favorito');
+      favoriteButton.innerText = 'Favoritar';
+    } else {
+      localStorage.setItem('favorito', 'true'); // Marca como favorito
+      favoriteButton.classList.add('favorito');
+      favoriteButton.innerText = 'Desfavoritar';
+    }
+  });
+});
