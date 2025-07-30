@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Motivação</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página de Motivação</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <img>
   <div class="container">
-    <h1>Você é capaz de conquistar tudo!</h1>
-    <p>Às vezes, tudo que precisamos é de um empurrãozinho. Continue acreditando em você!</p>
-    
-    <!-- Botão para favoritar com ícone -->
-    <button id="favorite-btn">
-      <span class="icon">⭐</span>Favoritar
+    <h1>Você é capaz!</h1>
+    <p>
+      Cada dia é uma nova oportunidade para crescer, aprender e se superar.  
+      Acredite no seu potencial e siga em frente, porque grandes conquistas estão à sua espera.
+    </p>
+
+    <button id="favoritarBtn" aria-pressed="false" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                 C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
+                 c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </svg>
+      Favoritar
     </button>
-    
-    <!-- Botão para ir para a próxima página -->
-    <button id="next-btn" onclick="window.location.href = 'pagina2.html';">Ir para a próxima página</button>
   </div>
 
-  <script src="motivacao.js"></script> <!-- Link para o arquivo JavaScript -->
-
+  <script src="script.js"></script>
 </body>
 </html>

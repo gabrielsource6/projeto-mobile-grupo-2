@@ -1,67 +1,72 @@
-/* Estilos para a página de motivação */
+/* Fundo com imagem detalhada */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
     height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('https://source.unsplash.com/1600x900/?nature,motivation'); /* Imagem de fundo inspiradora */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   }
   
+  /* Container para texto e botão */
   .container {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
-    padding: 40px;
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
   }
   
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
   }
   
   p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
   }
   
-  #favorite-btn, #next-btn {
-    padding: 12px 30px;
-    font-size: 1rem;
+  /* Botão favoritar */
+  #favoritarBtn {
     cursor: pointer;
-    border-radius: 5px;
-    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
     color: white;
-    transition: background-color 0.3s;
-    margin: 10px;
-  }
-  
-  #favorite-btn {
-    background-color: #f39c12;
-    display: flex;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
+    user-select: none;
   }
   
-  #favorite-btn .icon {
-    margin-right: 8px;
+  #favoritarBtn:hover {
+    background-color: rgba(255, 255, 255, 0.35);
   }
   
-  #favorite-btn.favorito {
-    background-color: #e74c3c;
+  /* Botão ativo (favoritado) */
+  #favoritarBtn.favorito {
+    background-color: #ff4757;
+    border-color: #ff4757;
+    box-shadow: 0 0 15px #ff4757;
   }
   
-  #next-btn {
-    background-color: #3498db;
-  }
-  
-  #favorite-btn:hover, #next-btn:hover {
-    opacity: 0.8;
+  /* Ícone coração SVG */
+  #favoritarBtn svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    transition: fill 0.3s ease;
   }
   
