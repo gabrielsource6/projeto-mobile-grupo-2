@@ -28,6 +28,7 @@ body::before {
 .container {
     background-color: rgba(255, 255, 255, 0.7); /* Fundo branco semi-transparente */
     padding: 40px;
+    background-image: url('https://i.pinimg.com/736x/07/9e/ec/079eec71a346cd1aedb37544e3896281.jpg');
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
     text-align: center;
@@ -40,7 +41,7 @@ body::before {
 .container p {
     font-size: 1.8em;
     font-weight: bold;
-    color: #8c7ae6; /* Um tom de roxo pastel */
+    color: #111016; /* Um tom de roxo pastel */
     margin-bottom: 25px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -48,7 +49,7 @@ body::before {
 
 .phrase-box {
     background-color: #ffffff;
-    border: 2px solid #a0d9e7; /* Borda azul claro pastel */
+    border: 2px solid #e0a0b0; /* Borda azul claro pastel */
     padding: 30px 20px;
     margin-bottom: 30px;
     border-radius: 10px;
@@ -61,14 +62,14 @@ body::before {
 
 #phrase {
     font-size: 2.2em; /* Tamanho maior para a frase */
-    color: #6a5acd; /* Um tom de azul-roxo pastel */
+    color: #0f0e14; /* Um tom de azul-roxo pastel */
     font-style: italic;
     line-height: 1.4;
     margin: 0; /* Remove margem padrão do h1 */
 }
 
 button {
-    background-color: #a0d9e7; /* Azul claro pastel */
+    background-color: #b3707b; /* Azul claro pastel */
     color: white;
     border: none;
     padding: 15px 30px;
@@ -81,7 +82,7 @@ button {
 }
 
 button:hover {
-    background-color: #8bbdd9; /* Um pouco mais escuro ao passar o mouse */
+    background-color: #d56b7e; /* Um pouco mais escuro ao passar o mouse */
     transform: translateY(-3px); /* Efeito de elevação */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
