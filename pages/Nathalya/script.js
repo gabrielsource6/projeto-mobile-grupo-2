@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const phraseElement = document.getElementById('phrase');
-  const newPhraseBtn = document.getElementById('newPhraseBtn');
-  const likeBtn = document.getElementById('gosteiBtn');
-
-<<<<<<< HEAD
-  const phrases = [
+    // Seleção de elementos do DOM
+    const phraseElement = document.getElementById('phrase');
+    const newPhraseBtn = document.getElementById('newPhraseBtn');
+    const likeBtn = document.getElementById('gosteiBtn');
+  
+    // Array de frases motivacionais
+    const phrases = [
       "Com o coração cheio de gratidão, sei que sou capaz de superar qualquer obstáculo que a vida apresentar!",
       "É importante agradecer pelo hoje sem nunca desistir do amanhã!",
       "A ideia é nunca perder a motivação para subir cada degrau rumo ao sucesso, por mais difícil que seja. E também não esquecer de agradecer pelas lições aprendidas em cada etapa da jornada.",
@@ -16,109 +17,55 @@ document.addEventListener('DOMContentLoaded', () => {
       "Transforme seus muros em pontes.",
       "O otimismo é a fé daquele que conduz à realização; nada pode ser feito sem esperança.",
       "Pense, só não desista!"
-  ];
-
-  const favoritePhrasesStatus = {};
-
-  function getRandomPhrase() {
+    ];
+  
+    // Objeto para armazenar o status de "curtido" de cada frase
+    // A chave é a frase e o valor é um booleano (true se curtida, false caso contrário)
+    const favoritePhrasesStatus = {};
+  
+    /**
+     * Retorna uma frase aleatória do array de frases.
+     * @returns {string} Uma frase selecionada aleatoriamente.
+     */
+    function getRandomPhrase() {
       const randomIndex = Math.floor(Math.random() * phrases.length);
       return phrases[randomIndex];
-  }
-
-  function updateLikeButtonStatus() {
-      const currentPhrase = phraseElement.textContent;
-
+    }
+  
+    /**
+     * Atualiza o estado do botão "Gostei" com base na frase atual exibida.
+     * Adiciona/remove a classe 'clicked' e altera o texto do botão.
+     */
+    function updateLikeButtonStatus() {
+      const currentPhrase = phraseElement.textContent; // Obtém a frase atual do elemento
+  
+      // Verifica se a frase atual está marcada como favorita
       if (favoritePhrasesStatus[currentPhrase]) {
-          likeBtn.classList.add('clicked');
-          likeBtn.textContent = 'Gostei ❤️';
+        likeBtn.classList.add('clicked'); // Adiciona classe para estilização de "curtido"
+        likeBtn.textContent = 'Gostei ❤️'; // Altera o texto do botão
       } else {
-          likeBtn.classList.remove('clicked');
-          likeBtn.textContent = 'Gostei (:';
+        likeBtn.classList.remove('clicked'); // Remove classe se não for favorita
+        likeBtn.textContent = 'Gostei (:' // Altera o texto para o padrão
       }
-  }
-
-  newPhraseBtn.addEventListener('click', () => {
-      phraseElement.textContent = getRandomPhrase();
-      updateLikeButtonStatus(); 
-  });
-
-  likeBtn.addEventListener('click', () => {
-      const currentPhrase = phraseElement.textContent;
-      
+    }
+  
+    // Event Listener para o botão "Nova Frase"
+    newPhraseBtn.addEventListener('click', () => {
+      phraseElement.textContent = getRandomPhrase(); // Exibe uma nova frase aleatória
+      updateLikeButtonStatus(); // Atualiza o status do botão "Gostei" para a nova frase
+    });
+  
+    // Event Listener para o botão "Gostei"
+    likeBtn.addEventListener('click', () => {
+      const currentPhrase = phraseElement.textContent; // Obtém a frase atualmente exibida
+  
+      // Inverte o status de "curtido" da frase atual
       favoritePhrasesStatus[currentPhrase] = !favoritePhrasesStatus[currentPhrase];
-      updateLikeButtonStatus(); 
+      updateLikeButtonStatus(); // Atualiza o visual do botão "Gostei"
+    });
+  
+    // Inicialização: Exibe uma frase aleatória e atualiza o status do botão "Gostei"
+    // quando a página é carregada.
+    phraseElement.textContent = getRandomPhrase();
+    updateLikeButtonStatus();
   });
-
-  phraseElement.textContent = getRandomPhrase();
-  updateLikeButtonStatus(); 
-});
-=======
-  const phraseElement = document.getElementById('phrase');
-
-  const newPhraseBtn = document.getElementById('newPhraseBtn');
-
-
-
-  const phrases = [
-      "Com o coração cheio de gratidão, sei que sou capaz de superar qualquer obstáculo que a vida apresentar!",
-
-      "Acredite no seu potencial e voe alto!",
-
-      "O único lugar onde o sucesso vem antes do trabalho é no dicionário.",
-
-      "Seja a mudança que você deseja ver no mundo.",
-
-      "A persistência é o caminho do êxito.",
-
-      "Comece onde você está. Use o que você tem. Faça o que você pode.",
-
-      "Não espere por oportunidades, crie-as.",
-
-      "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
-
-      "Transforme seus muros em pontes.",
-
-      "A jornada de mil milhas começa com um único passo.",
-
-      "Sua atitude determina sua direção."
-
-
-  ];
-
-
-
-  function getRandomPhrase() {
-
-      const randomIndex = Math.floor(Math.random() * phrases.length);
-
-      return phrases[randomIndex];
-
-  }
-
-
-
-  newPhraseBtn.addEventListener('click', () => {
-
-      phraseElement.textContent = getRandomPhrase();
-
-  });
-
-
-
-  // Display an initial phrase when the page loads
-
-  phraseElement.textContent = getRandomPhrase();
-
-});
-
-const botao = document.getElementById('gosteiBtn');
-
-botao.addEventListener('click', () => {
-botao.classList.toggle('clicked');
-if (botao.classList.contains('clicked')) {
-  botao.textContent = 'Gostei ❤️';
-} else {
-  botao.textContent = 'Gostei (:';
-}
-});   
->>>>>>> ae1f0cc77405444e50aa5821fdf83124fe48d471
