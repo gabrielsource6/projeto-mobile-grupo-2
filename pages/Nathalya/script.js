@@ -17,8 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
       "Pense, só não desista!"
     ];
   
-    const favoritePhrasesStatus = 
-        
+    
+    const favoritePhrasesStatus = {};
+  
     function getRandomPhrase() {
       const randomIndex = Math.floor(Math.random() * phrases.length);
       return phrases[randomIndex];
@@ -50,4 +51,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     phraseElement.textContent = getRandomPhrase();
     updateLikeButtonStatus();
-  });
+});
