@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Seleção de elementos do DOM
     const phraseElement = document.getElementById('phrase');
     const newPhraseBtn = document.getElementById('newPhraseBtn');
     const likeBtn = document.getElementById('gosteiBtn');
   
-    // Array de frases motivacionais
     const phrases = [
       "Com o coração cheio de gratidão, sei que sou capaz de superar qualquer obstáculo que a vida apresentar!",
       "É importante agradecer pelo hoje sem nunca desistir do amanhã!",
@@ -19,53 +17,37 @@ document.addEventListener('DOMContentLoaded', () => {
       "Pense, só não desista!"
     ];
   
-    // Objeto para armazenar o status de "curtido" de cada frase
-    // A chave é a frase e o valor é um booleano (true se curtida, false caso contrário)
-    const favoritePhrasesStatus = {};
-  
-    /**
-     * Retorna uma frase aleatória do array de frases.
-     * @returns {string} Uma frase selecionada aleatoriamente.
-     */
+    const favoritePhrasesStatus = 
+        
     function getRandomPhrase() {
       const randomIndex = Math.floor(Math.random() * phrases.length);
       return phrases[randomIndex];
     }
   
-    /**
-     * Atualiza o estado do botão "Gostei" com base na frase atual exibida.
-     * Adiciona/remove a classe 'clicked' e altera o texto do botão.
-     */
     function updateLikeButtonStatus() {
-      const currentPhrase = phraseElement.textContent; // Obtém a frase atual do elemento
+      const currentPhrase = phraseElement.textContent; 
   
-      // Verifica se a frase atual está marcada como favorita
       if (favoritePhrasesStatus[currentPhrase]) {
-        likeBtn.classList.add('clicked'); // Adiciona classe para estilização de "curtido"
-        likeBtn.textContent = 'Gostei ❤️'; // Altera o texto do botão
+        likeBtn.classList.add('clicked');
+        likeBtn.textContent = 'Gostei ❤️'; 
       } else {
-        likeBtn.classList.remove('clicked'); // Remove classe se não for favorita
-        likeBtn.textContent = 'Gostei (:' // Altera o texto para o padrão
+        likeBtn.classList.remove('clicked'); 
+        likeBtn.textContent = 'Gostei (:' 
       }
     }
   
-    // Event Listener para o botão "Nova Frase"
     newPhraseBtn.addEventListener('click', () => {
-      phraseElement.textContent = getRandomPhrase(); // Exibe uma nova frase aleatória
-      updateLikeButtonStatus(); // Atualiza o status do botão "Gostei" para a nova frase
+      phraseElement.textContent = getRandomPhrase(); 
+      updateLikeButtonStatus(); 
     });
   
-    // Event Listener para o botão "Gostei"
     likeBtn.addEventListener('click', () => {
-      const currentPhrase = phraseElement.textContent; // Obtém a frase atualmente exibida
+      const currentPhrase = phraseElement.textContent;
   
-      // Inverte o status de "curtido" da frase atual
       favoritePhrasesStatus[currentPhrase] = !favoritePhrasesStatus[currentPhrase];
-      updateLikeButtonStatus(); // Atualiza o visual do botão "Gostei"
+      updateLikeButtonStatus();
     });
-  
-    // Inicialização: Exibe uma frase aleatória e atualiza o status do botão "Gostei"
-    // quando a página é carregada.
+
     phraseElement.textContent = getRandomPhrase();
     updateLikeButtonStatus();
   });
