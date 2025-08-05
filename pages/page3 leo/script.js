@@ -44,3 +44,38 @@ newQuoteBtn.addEventListener('click', generateRandomQuote);
 
 
 window.onload = generateRandomQuote;
+
+const favoritePhrasesStatus = {};
+
+  function getRandomPhrase() {
+      const randomIndex = Math.floor(Math.random() * phrases.length);
+      return phrases[randomIndex];
+  }
+
+  function updateLikeButtonStatus() {
+      const currentPhrase = phraseElement.textContent;
+
+      if (favoritePhrasesStatus[currentPhrase]) {
+          likeBtn.classList.add('clicked');
+          likeBtn.textContent = 'Gostei ❤️';
+      } else {
+          likeBtn.classList.remove('clicked');
+          likeBtn.textContent = 'Gostei (:';
+      }
+  }
+
+  newPhraseBtn.addEventListener('click', () => {
+      phraseElement.textContent = getRandomPhrase();
+      updateLikeButtonStatus(); 
+  });
+
+  likeBtn.addEventListener('click', () => {
+      const currentPhrase = phraseElement.textContent;
+      
+      favoritePhrasesStatus[currentPhrase] = !favoritePhrasesStatus[currentPhrase];
+      updateLikeButtonStatus(); 
+  });
+
+  phraseElement.textContent = getRandomPhrase();
+  updateLikeButtonStatus(); 
+});
