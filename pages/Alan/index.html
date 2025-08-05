@@ -3,26 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Página de Motivação</title>
+  <title>Frases Motivacionais</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Você é capaz!</h1>
-    <p>
-      Cada dia é uma nova oportunidade para crescer, aprender e se superar.  
-      Acredite no seu potencial e siga em frente, porque grandes conquistas estão à sua espera.
-    </p>
-
-    <button id="favoritarBtn" aria-pressed="false" type="button">
+  <h1>Frase Motivacional</h1>
+  <p id="quote">Carregando frase...</p>
+  <div class="buttons">
+    <button id="favoriteBtn" class="favorite-btn" aria-label="Favoritar frase">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
-                 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
-                 C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
-                 c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42
+          3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3
+          19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
       </svg>
       Favoritar
     </button>
+    <button id="nextBtn" aria-label="Próxima frase">Próxima</button>
   </div>
 
   <script src="script.js"></script>
